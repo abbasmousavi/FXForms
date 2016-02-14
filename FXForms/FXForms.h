@@ -222,6 +222,7 @@ UIKIT_EXTERN NSString *const FXFormFieldTypeImage; //image
 
 @interface FXFormTextViewCell : FXFormBaseCell
 
++ (UITextView *)textViewForSizing;
 @property (nonatomic, readonly) UITextView *textView;
 
 @end
