@@ -6,7 +6,7 @@
   "homepage": "https://github.com/abbasmousavi/FXForms.git",
   "authors": "Nick Lockwood",
   "source": {
-    "git": "https://github.com/abbasmousavi/FXForms.git",
+    "git": "https://github.com/abbasmousavi/FXForms.git"
   },
   "source_files": "FXForms/FXForms.{h,m}",
   "requires_arc": true,
