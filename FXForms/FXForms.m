@@ -1503,10 +1503,11 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     }
     
     //create add button
-    NSString *addButtonTitle = self.field.fieldTemplate[FXFormFieldTitle] ?: NSLocalizedString(@"Add Item", nil);
+    NSString *addButtonTitle = self.field.fieldTemplate[FXFormFieldTitle] ?: NSLocalizedString(@"اضافه کردن عکس", nil);
     [_fields addObject:@{FXFormFieldTitle: addButtonTitle,
                          FXFormFieldCell: [FXFormDefaultCell class],
-                         @"textLabel.textAlignment": @(NSTextAlignmentLeft),
+                         @"textLabel.textAlignment": @(NSTextAlignmentRight),
+                         @"textLabel.font": [UIFont fontWithName:@"IRAN" size:16],
                          FXFormFieldAction: ^(UITableViewCell<FXFormFieldCell> *cell) {
         
         FXFormField *field = cell.field;
@@ -2334,7 +2335,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
     {
         if (indexPath.row == (NSInteger)[section.fields count] - 1)
         {
-            return UITableViewCellEditingStyleInsert;
+            return UITableViewCellEditingStyleNone;;
         }
         return UITableViewCellEditingStyleDelete;
     }
