@@ -965,6 +965,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
         {
             if ([self isIndexedType])
             {
+		if ([value unsignedIntegerValue] == NSNotFound) return nil;
                 if ([value unsignedIntegerValue] >= [self.options count]) value = nil;
             }
             else if (![self isCollectionType] && ![self.type isEqualToString:FXFormFieldTypeBitfield])
